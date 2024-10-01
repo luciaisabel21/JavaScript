@@ -23,8 +23,10 @@ switch (operacion) {
     case 4: 
         division = a / b;
         alert ("el resultado es " + division);
-        
-        default;
+        break;
+
+        default:
+            alert("La operacion no se reconoce");
 
 
 }
