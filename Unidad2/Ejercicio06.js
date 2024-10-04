@@ -18,4 +18,4 @@ for(let i = 1; i<= b; i++) {
     resultado *= (a * i);
 }
 
-alert(resultado);
+console.log("El resultado es " + resultado);
