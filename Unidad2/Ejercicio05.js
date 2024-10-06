@@ -10,4 +10,4 @@ for(let i = 1; i<= number; i++) {
     suma += i; 
 }
 
-alert (suma);
+console.log(suma);
