@@ -45,7 +45,7 @@
 
         console.table(tresdim);
         console.log(tresdim [0][1][0]); //tendria que mostrarte el 3. 
-        console.log(tresdim [1] [0] [1]); //tendria que mostrarte el valor 6
+        console.log(tresdim [1][0][1]); //tendria que mostrarte el valor 6
 
         //Explicacion: las primeras llaves moradas serie 0, las segundas llaves moradas seria 1; luego dentro de las
         //llaves moradas las primeras azules seria 0 y las segundas 1, y dentro de las llaves azules el primer numero seria 0 y el segundo 1
@@ -56,6 +56,95 @@
                 console.log(vector[i]);
                 
             }
+        
+        //AÑADIR ELEMENTOS A UN ARRAY
+
+        let vec1 = [1,2,3,4,5];
+        vec1.push(6);
+        console.table(vec1);
+
+        vec1.unshift(7);
+        console.table(vec1);
+
+        vec1[vec1.length] = 8;
+        console.table(vec1);
+
+        vec1.length = 12;
+        console.table(vec1);
+
+        console.table(vec1[vec1.length-1]);
+
+        vec1.length = 7;  //le cambiamos la longitud a 7, por lo tanto los elementos de después se borran
+        console.table(vec1);
+
+
+        //ELIMINAR ELEMENTOS DE UN ARRAY
+
+        console.log("ELIMINAR ELEMENTOS DE ARRAY")
+        vec1.pop();
+        vec1.shift();
+        console.table(vec1);
+
+        vec1.splice(2,2);
+        console.table(vec1);
+
+        //CONCATENACIÓN (UNION) DE ARRAYS
+
+        let array1 = [1,2,3];
+        let  array2 = [4,5,6];
+        let nuevo = array2.concat(array1);
+        console.table(nuevo);
+
+
+        //COPIA DE ARRAYS
+
+        let vec3 = [1,2,3,4,5];
+        console.table(vec3);
+        let vec4 = vec3;
+        vec4[0] = 100;
+        console.table(vec3);
+
+        let dupl_vec = vec3.slice();
+        console.table(dupl_vec);
+        dupl_vec[0] = 50;
+        console.table("DUPLICADO");
+        console.table(dupl_vec);
+
+        console.log("ORIGINAL");
+        console.table(vec3);
+
+        let arrayOriginal = [1,2,[3,4] , { nombre: "Ana"}];
+       // let copia = structuredClone(arrayOriginal);
+        let copiar = arrayOriginal.slice();
+
+        copia[0] = 1000;
+        copia[2][0] = 99;
+        copia[3].nombre = "Luis";
+
+        console.log(arrayOriginal);
+        console.log(copia);
+
+
+        //ORDENACION DE ARRAYS
+
+        let letras = ["f", "h", "z"];
+        letras.sort();
+        console.table(letras);
+
+        let numeros = [10,15,5,49, 0];
+        numeros.sort();
+        console.table(numeros);
+
+        numeros.reverse();
+        console.table(numeros);
+
+
+
+
+
+
+
+
         
 
     </script>
