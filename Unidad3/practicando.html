@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicando</title>
+</head>
+<body>
+    <script>
+    
+    //Ejercicio 1
+    // crea un script que reciba un número a través de prompt e indique si ese numero es par o impar.
+    //EL mensaje lo tiene que enseñar por consola
+        let numero = prompt("Introduce un numero");
+
+        if(numero % 2 == 0){
+            console.log("Es par")
+        } else {
+            console.log("Es impar")
+        }
+
+    //Ejercicio 2
+    //Realiza un script que calcule el valor factorial de un número entero. El número será introducido mediante prompt
+    // y el resultado se mostrará por consola
+    //EL factorial de un numero es la multiplicacion de ese numero por todos los que numero menores que él hasta el numero 1.
+    // Factorial de n = n x (n-1) x (n-2) x (n-3)...
+    // Es decir, el factorial de 5 es el resultado de multiplicar 5x4x3x2x1 
+     
+     let num = prompt("Introduce un número entero:");
+    let contador = 1;  //empieza por 1
+    for (let i = n; i <= num; i++) {
+        contador *= i;
+        
+        console.log(num)
+    }
+    //Ejercicio3
+    // Realiza un script que genere en un array la tabla de multiplicar de un numero  que se introduce por prompt. 
+    //El resultado se guardará en una matriz y se visualizará con console.table. Se calcularán los 10 primero numeros.
+    //EL número deberá de ser un entero. Si no se introduce un número, entornces deberá mostrarse un mensaje indicando que no se ha introducido eçun numero valido
+
+    let tabla  = []; //creamos el array vacio
+
+    let n = parseInt(prompt("Introduce un número entero:"));
+    if (!isNaN(n)) {
+    // Generamos la tabla de multiplicar
+    for (let i = 1; i <= 10; i++) {
+        let resultado = n * i;
+        // Añadimos cada fila de la tabla a nuestro array
+        tabla.push([n, "x", i, "=", resultado]);
+    }
+
+    console.table(tabla);
+} else {
+    console.log("Introduce un número válido (numero)");
+}
+
+
+/* Aclaración:  !isNaN(n) Es una función de JavaScript que determina si el valor pasado no es un número. Si el valor no es un número, devuelve true. Si el valor es un número, devuelve false.
+        Ejemplos:
+            isNaN("abc") -> true (porque "abc" no es un número)
+            isNaN(123) -> false (porque 123 es un número)
+
+    !isNaN(n): El operador ! (negación) invierte el valor devuelto por isNaN(). Entonces, si n es un número, isNaN(n) será false y !isNaN(n) será true. Esto significa que la condición se cumple solo si n es un número.
+
+En resumen, la línea if (!isNaN(n)) { está preguntando:
+
+    "Si n es un número válido, haz lo que está dentro del bloque if , sino te hace el else" */
+
+    //Ejerrcicio 4
+    //Mini:diccionario: realiza un script que traduzca ciertas palabras al idioma ingles. El diccionario estará en un array
+    //de dos dimensiones en el que la primera columna será para palabras en español y la segunda para palabras en ingles.
+    //EL usuario escribirá una palabra en español y esta palabra se buscará mediante una esctructura while (obligatoriamente)
+    //Si se encuentra la palabra, el bucle finalizará y mostrará la palabra  en ingles. Si la palabra no se encuentra, se mostrará
+    //un mensaje indicando que la palabra no se encuentra en el diccionario.
+    //El mensaje de resultado se mostrará por consola
+
+
+
+    </script>
+</body>
+</html>
