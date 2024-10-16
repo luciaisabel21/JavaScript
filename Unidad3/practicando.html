@@ -66,13 +66,121 @@ En resumen, la línea if (!isNaN(n)) { está preguntando:
 
     "Si n es un número válido, haz lo que está dentro del bloque if , sino te hace el else" */
 
-    //Ejerrcicio 4
+    //Ejercicio 4
     //Mini:diccionario: realiza un script que traduzca ciertas palabras al idioma ingles. El diccionario estará en un array
     //de dos dimensiones en el que la primera columna será para palabras en español y la segunda para palabras en ingles.
     //EL usuario escribirá una palabra en español y esta palabra se buscará mediante una esctructura while (obligatoriamente)
     //Si se encuentra la palabra, el bucle finalizará y mostrará la palabra  en ingles. Si la palabra no se encuentra, se mostrará
     //un mensaje indicando que la palabra no se encuentra en el diccionario.
     //El mensaje de resultado se mostrará por consola
+
+    const palabraUsuario = prompt("Introduce una palabra en español para traducirla al inglés:");
+    let diccionario = [
+    ["hola", "hello"],
+    ["mundo", "world"],
+    ["gato", "cat"],
+    ["perro", "dog"],
+    ["gracias", "thank you"],
+    ["amor", "love"],
+    ["casa", "house"],
+    ["coche", "car"],
+    ["comida", "food"],
+    ["libro", "book"]
+];
+    traducir(palabraUsuario);
+    
+    // Función para buscar la palabra en el diccionario
+   function traducir(palabraEsp) {
+    let i = 0;
+    let encontrado = false;
+    
+    while (i < diccionario.length) {
+        if (diccionario[i][0] === palabraEsp.toLowerCase()) {
+            console.log(`La traducción de "${palabraEsp}" es: "${diccionario[i][1]}"`);
+            encontrado = true;
+            break;
+        }
+        i++;
+    }
+
+    // Si no se encuentra la palabra, mostrar mensaje de error
+    if (!encontrado) {
+        console.log(`La palabra "${palabraEsp}" no se encuentra en el diccionario.`);
+    }
+}
+//otra forma de hacerlo:
+/*let diccionario = [
+["hola", "hello"],
+    ["mundo", "world"],
+    ["gato", "cat"],
+    ["perro", "dog"],
+    ["gracias", "thank you"],
+    ["amor", "love"],
+    ["casa", "house"],
+    ["coche", "car"],
+    ["comida", "food"],
+    ["libro", "book"];
+console.table(diccionario);
+let palabra = prompt("Introduzca una palabra";)
+// let enc = false;
+// let pos = 0;
+// while ((!enc) && (pos < diccionario.length)) {
+// if (diccionario[pos][0] === palabra){
+//enc = true;
+//}else {
+//pos ++;
+//}
+//if (enc) {
+// console.log("La palabra es"  + diccionario[pos][1]);
+//}else {
+//console.log("La palabra no se encuentra en el diccionario");
+//}
+
+*/
+
+//Ejercicio 5
+//Realiza un script que recorra un vector con numero y que de como resultado el menor de todos
+
+let numeros = [34, 7, 23, 32, 5, 62, 18];
+
+// Función para encontrar el menor número
+function encontrarMenor(arr) {
+    let menor = arr[0];  // Asumimos que el primer número es el menor inicialmente
+    let i = 1;           // Iniciamos el índice desde el segundo elemento
+
+    // Bucle para recorrer el array
+    while (i < arr.length) {
+        if (arr[i] < menor) {
+            menor = arr[i];  // Si encontramos un número menor, lo actualizamos
+        }
+        i++;
+    }
+
+    return menor;  // Devolvemos el menor número
+}
+
+// Llamada a la función y mostrar el resultado en consola
+const menorNumero = encontrarMenor(numeros);
+console.log(`El menor número es: ${menorNumero}`);
+
+// otra forma de hacerlo:
+
+/*
+let numeros = [34, 7, 23, 32, 5, 62, 18];
+let min = vector[0];
+for(let i=0; i<=vector.length; i++){
+    if(vector[i]<min){
+        min=vector[i];
+    }
+}
+console.log(min);
+*/
+
+
+//Ejercicio  6
+//REaliza un script que muestre los numeros enteros que hay entre dos numeros. El script pediŕa dos numeros enteros
+// y el primer numero debe ser menos que el sefundo. Si esta condicion no se cumple, nos mostrará un mensaje que diga
+// que se ha cometido un error al dar los números
 
 
 
