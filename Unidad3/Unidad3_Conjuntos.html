@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjuntos</title>
+</head>
+<body>
+    <script>
+        const miConjunto = new Set();
+        console.log(miConjunto); 
+
+        const  miConjunto2 = new Set([1, 2, 3, 4,]);
+        console.log(miConjunto2);
+
+        console.log("El tamaño del conjunto es ${miConjunto2.size}");
+
+        miConjunto2.add(10).add(13).add(5);
+        console.log(miConjunto2);
+        console.log(miConjunto2.size);
+
+        miConjunto2.delete(5);
+        console.log(miConjunto2);
+        console.log("El tamaño del conjunto es ${miConjunto2.size}");
+
+        
+        
+
+
+
+    </script>
+    
+</body>
+</html>

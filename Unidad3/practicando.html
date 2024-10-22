@@ -179,11 +179,127 @@ console.log(min);
 
 //Ejercicio  6
 //REaliza un script que muestre los numeros enteros que hay entre dos numeros. El script pediŕa dos numeros enteros
-// y el primer numero debe ser menos que el sefundo. Si esta condicion no se cumple, nos mostrará un mensaje que diga
+// y el primer numero debe ser menor que el segundo. Si esta condicion no se cumple, nos mostrará un mensaje que diga
 // que se ha cometido un error al dar los números
 
+let n1 = parseInt(prompt("Introduce un número entero:"));
+let n2 = parseInt(prompt("Introduce un número entero:"));
 
 
+
+
+// Piensa en un script que elimine de un vector un elemento que se le pase por prompt. El tamaño del vector
+// se reducirá en uno si lo encuentra
+
+let  vector = [1, 2, 3, 4, 5, 6,];
+
+let elemento = parseInt(prompt("Introduce un número entero:"));
+
+//incompleto
+
+
+
+//crea un conjunto que contenga los "x" primeros numeros impares. X es una variable cuyo valor podra cambiar. Se debe visualizar el numero total
+// de elementos del conjunto y el resultado una vez que el conjunto se haya completado.
+//Observaciones: se deberá poner especial atención a la forma en la que se declaran las variables atendiendo a las recomendaciones de la comunidad
+// No se puede utilizar instrucciones de salto de codigo (es decir, hay que hacerlo con un while)
+
+const x = 10; 
+let conjuntoImpares = new Set();
+let cont = 1; 
+let cantidadImpares = 0;
+
+
+while (cantidadImpares < x) {
+    if (cont % 2 !== 0) { // Verificamos si el número es impar
+        conjuntoImpares.add(cont);
+        cantidadImpares++; // Aumentamos el contador de impares agregados
+    }
+    cont++; // Continuamos al siguiente número
+}
+
+// Mostramos el total de elementos y el conjunto completo
+console.log(`Total de elementos en el conjunto: ${conjuntoImpares.size}`);
+console.log(`Conjunto de los ${x} primeros números impares:`, conjuntoImpares);
+
+
+// Buscar un elemento en un conjunto sin utilizar el metodo has. Devolverá true si el elemeto se encuentra y false si no se encuentra
+// Este valor se almacenará en una variable. Se debe comprobar que el conjunto tiene datos antes de empezar a buscar el elemento.
+//Para finalizar se deberá mostrar un texto indicando si el elemento se ha encontrado o no se ha encontrado
+
+
+
+//Observaciones: se deberá poner especial atención a la forma en la que se declaran las variables atendiendo a las recomendaciones
+// de la comunidad
+
+
+
+
+const conjunto = new Set([1, 2, 3, 4, 5]);
+const elementoBuscado = 3; // Elemento que se desea buscar
+let encontrado = false; // Variable para almacenar si el elemento ha sido encontrado o no
+
+if (conjunto.size > 0) { // Comprobamos si el conjunto tiene datos
+
+    for (let elemento of conjunto) {     // Recorremos el conjunto
+        if (elemento === elementoBuscado) {
+            encontrado = true;
+            break; // Salimos del bucle si lo encontramos
+        }
+    }
+} else {
+    console.log("El conjunto está vacío.");  //si no  hay datos en el conjunto, mostramos un mensaje
+}
+
+// Mostrar resultado
+if (encontrado) {
+    console.log("El elemento se ha encontrado.");
+} else {
+    console.log("El elemento no se ha encontrado.");
+
+}
+
+//EXTRA: una vez hecho lo que se pide en este apartado, crea un segundo script modificando el código hecho para que, además, devuelva 
+// la posición en la que se encuentra el elemento. Esto deberá guardarlo en una variable y en el mensaje que dice que se ha encontrado
+//el elemento, decir la posición
+
+/*
+
+const conjunto = new Set([1, 2, 3, 4, 5]); // Definimos el conjunto con algunos valores
+
+
+const elementoBuscado = 3;  // Elemento que se desea buscar
+
+
+let encontrado = false;  // Variable para almacenar si el elemento ha sido encontrado o no
+
+// Variable para almacenar la posición del elemento encontrado
+let posicion = -1; // Inicializamos en -1 para indicar que no se ha encontrado aún
+
+
+if (conjunto.size > 0) { // Comprobamos si el conjunto tiene datos
+    
+    let index = 0; // Recorremos el conjunto con un contador para la posición
+    for (let elemento of conjunto) {
+        if (elemento === elementoBuscado) {
+            encontrado = true;
+            posicion = index; // Guardamos la posición
+            break; // Salimos del bucle si encontramos el elemento
+        }
+        index++; // Incrementamos la posición
+    }
+} else {
+    console.log("El conjunto está vacío.");
+}
+
+// Mostrar resultado
+if (encontrado) {
+    console.log(`El elemento se ha encontrado en la posición ${posicion}.`);
+} else {
+    console.log("El elemento no se ha encontrado.");
+}
+
+*/
     </script>
 </body>
 </html>
