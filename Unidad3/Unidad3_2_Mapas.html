@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mapas </title>
+</head>
+<body>
+    <script>
+
+        const miMapa2 = new Map([["nombre", "Marcos"], ["apellido1", "Lopez"], ["apellido2", "Abad"], ["edad", 20]]);
+
+        console.log(miMapa2);
+        console.table(miMapa2);
+
+
+        miMapa.set("nombre", "Miguel");
+        miMapa.set("apellido1", "Barbol");
+        miMapa.set("apellido2", "Sanchez");
+        miMapa.set("edad", 23);
+
+        const miMapa = new Mapa();
+        console.log(miMapa);
+        console.table(miMapa);
+
+        console.log("Datos del alumno: ");
+        console.log(miMapa.get("nombre"));
+
+        if(miMapa.has(apellido1)){
+            console.log(`El apellido es ${miMapa.get("apellido1")}`);
+        }
+        if(miMapa.has(edad)){
+            console.log(`La edad es ${miMapa.get("edad")}`);
+        }else {
+            console.log("No existe la clave edad");
+        }
+
+        console.log(`El mapa tiene ${miMapa.size} elementos`);
+
+        for (let va of miMapa2.values()) console.log("-" + va );   // va significa valor
+        
+        const miArray = [...miMapa];
+        console.table(miArray);
+
+
+        const libro1 = [["titulo", "El señor de los anillos"],
+                        ["autor", "J.R.R. Tolkien"],
+                        ["páginas", 336] ];
+
+        const mapaLibro =  new Map(libro1);
+        
+        console.table(mapaLibro);
+
+     
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

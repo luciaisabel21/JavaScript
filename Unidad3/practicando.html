@@ -191,11 +191,24 @@ let n2 = parseInt(prompt("Introduce un número entero:"));
 // Piensa en un script que elimine de un vector un elemento que se le pase por prompt. El tamaño del vector
 // se reducirá en uno si lo encuentra
 
-let  vector = [1, 2, 3, 4, 5, 6,];
 
-let elemento = parseInt(prompt("Introduce un número entero:"));
+let vector = [1, 2, 3, 4, 5, 6, 7, 8];
 
-//incompleto
+let elemento = prompt("Ingrese el elemento que desea eliminar del vector:");
+
+// Convertir el elemento a número si el vector contiene números
+elemento = Number(elemento);
+
+// Buscar el índice del elemento en el vector
+const index = vector.indexOf(elemento);
+
+if (index !== -1) {
+    // Si el elemento se encuentra, eliminarlo del vector
+    vector.splice(index, 1);
+    console.log(`Elemento eliminado. El nuevo vector es: ${vector}`);
+} else {
+    console.log("Elemento no encontrado en el vector.");
+}
 
 
 
@@ -265,41 +278,6 @@ if (encontrado) {
 
 /*
 
-const conjunto = new Set([1, 2, 3, 4, 5]); // Definimos el conjunto con algunos valores
-
-
-const elementoBuscado = 3;  // Elemento que se desea buscar
-
-
-let encontrado = false;  // Variable para almacenar si el elemento ha sido encontrado o no
-
-// Variable para almacenar la posición del elemento encontrado
-let posicion = -1; // Inicializamos en -1 para indicar que no se ha encontrado aún
-
-
-if (conjunto.size > 0) { // Comprobamos si el conjunto tiene datos
-    
-    let index = 0; // Recorremos el conjunto con un contador para la posición
-    for (let elemento of conjunto) {
-        if (elemento === elementoBuscado) {
-            encontrado = true;
-            posicion = index; // Guardamos la posición
-            break; // Salimos del bucle si encontramos el elemento
-        }
-        index++; // Incrementamos la posición
-    }
-} else {
-    console.log("El conjunto está vacío.");
-}
-
-// Mostrar resultado
-if (encontrado) {
-    console.log(`El elemento se ha encontrado en la posición ${posicion}.`);
-} else {
-    console.log("El elemento no se ha encontrado.");
-}
-
-*/
     </script>
 </body>
 </html>

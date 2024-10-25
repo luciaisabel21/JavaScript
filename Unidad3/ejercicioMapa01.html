@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ejercicio Mapas 01</title>
+</head>
+<body>
+    <script>
+
+        const clase = new Map([["dwec", "desarrollo web en entorno cliente" ],
+                            ["diw", "diseño de interfaces web"],
+                            ["dwes", "desarrollo web en entorno servidor"],
+                            ["daw", "despliegue de aplicaciones web"],
+                            ["ig", "ingles"],
+                            ["eie", "empresa e iniciativa emmprendedora"]]);
+    
+        // Mostrar el número de módulos almacenados
+        console.log(`La clase tiene ${clase.size} modulos`);
+
+        //Mostrar las claves junto con los valores (recorrerlo)
+        for (let [clave, valor] of clase){
+            console.log(`Clave: ${clave} - Valor: ${valor}`);
+        } 
+
+        //Comprobar si existe la clave “dwec”
+
+        if(clase.has(dwec)){
+            console.log("Si existe la clave dwec")
+        }
+
+        //Mostrar el valor de “dwes”. Se debe comprobar antes que existe.
+
+        if(clase.has(dwes)){
+            console.log(`El valor de dwes es ${clase.get("dwes")}`);
+        }
+
+        //Mostrar todas las claves
+
+
+        //Mostrar todas las claves
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
