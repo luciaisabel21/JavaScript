@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empezando con funciones </title>
+</head>
+<body>
+
+    <script>
+
+        function saludo1(nombre) {
+            console.log(`Te saludo, ${nombre} `);
+        }
+        saludo1("Cesar");
+
+
+        function parOImpar (numero){
+            if(numero  % 2 == 0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        parOImpar(2);
+
+        function triple (num){
+            return mun*num*num;
+        }
+        console.log(triple(3))
+
+
+    /* Realiza una función que admita dos parámetros. Vector con datos y dato buscado en el vector.
+    La función debe buscar el elemento buscado en el vector. Devolverá true si se encuentra y false
+    si no  se encuentra.
+    Se debe emplear la instrucción while para buscar el elemento y se debe tener en cuenta lo siguiente:
+    cuando se encuentre el elemento, el bucle debe finalizar
+    no se puede utilizar ninguna instrucción de salto (break)
+    se debe utilizar var, let o const de acuerdo con la recomendación de la comunidad de programadores de JS */
+
+    function buscarElemento(vector, elementoBuscado) {
+    let encontrado = false;  // Inicializamos una variable para indicar si se ha encontrado el elemento
+    let i = 0;  // Índice para recorrer el vector
+
+    // Bucle while que recorrerá el vector hasta encontrar el elemento o llegar al final
+    while (i < vector.length && !encontrado) {
+        if (vector[i] === elementoBuscado) {
+            encontrado = true;  // Cambia a true si el elemento es encontrado
+        } else {
+            i++;  // Incrementa el índice si el elemento no es encontrado
+        }
+    }
+
+    return encontrado;  // Devuelve true si se encontró el elemento, false si no
+}
+
+//EJEMPLO DE USO
+const datos = [10, 20, 30, 40, 50];
+console.log(buscarElemento(datos, 30));  // Devuelve true
+console.log(buscarElemento(datos, 60));  // Devuelve false
+    </script>
+    
+</body>
+</html>

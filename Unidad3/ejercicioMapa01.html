@@ -25,20 +25,25 @@
 
         //Comprobar si existe la clave “dwec”
 
-        if(clase.has(dwec)){
+        if(clase.has("dwec")){
             console.log("Si existe la clave dwec")
         }
 
         //Mostrar el valor de “dwes”. Se debe comprobar antes que existe.
 
-        if(clase.has(dwes)){
+        if(clase.has("dwes")){
             console.log(`El valor de dwes es ${clase.get("dwes")}`);
         }
 
         //Mostrar todas las claves
 
+        for(let clave of clase.keys()) {
+            console.log(clave)
+        }
 
-        //Mostrar todas las claves
+        //Mostrar todas los valores
+
+        for (let valores of clase.values()) console.log("-" + valores )
 
 
 
