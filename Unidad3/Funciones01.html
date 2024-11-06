@@ -58,7 +58,76 @@
 const datos = [10, 20, 30, 40, 50];
 console.log(buscarElemento(datos, 30));  // Devuelve true
 console.log(buscarElemento(datos, 60));  // Devuelve false
-    </script>
+
+
+//Realiza una funcion que añada un elemento al final de un vector sin utilizar el metodo push. Si el valor ya existe, entones no se puede introducir.
+//sin hacer
+</script>
+<script>
+
+// PARAMETROS POR VALOR
+
+    // si le doy un nombre (ismael) me devuelve: Yo te salido, amigo Ismael; si no le diese ninguno me cogeria
+    // el parametro  por defecto que le he dado en la funcion (Juan)
+    function saludo (nombre = "juanito"){
+        console.log(`Yo te saludo, amigo ${nombre}`);
+
+    }
+
+    saludo(ismael);
+
+
+    function suma(a = 2, b = 5) {
+        return a + b;
+    }
+    console.log(suma()); //da 7, porque no le has dado ningun valor, ent te coge los que has dado por parametro
+    console.log(suma(5)); // da 10, porque te al daler un valor solo te lo pone en el primero que es a, ent a(5) + b(5) = 10
+    console.log(suma(4,7)); // da 11
+
+//PARAMETROS POR VARIABLES
+
+//con el objeto arguments
+
+function restaACien(){
+    resul = 100;
+    for(let paso=0; paso < arguments.length; paso++){
+         resul = resul - arguments(paso);
+    }
+
+    return resul;
+}
+    console.log(restaACien(1,3,6));
+
+//declarar parametro con el operador de propagacion ()...)
+
+function multi(...num){
+    resul = 1;
+    for(let i = 0; i < num.length; i++){
+        resul = resul * num[i];
+    }
+    return resul;
+}
+
+    console.log("\n");  // esto es un salto de linea
+    console.log(multi(1,2,3,4,1));
+    console.log(multi(1,2,4,6));
+
+//TIPOS DE FUNCIONES 
+// POR DECLARACION
+
+//Ejercicio 1: funcion para calcular el área de un circulo. Escribe una función llamada calcularAreaCirculo que reciba el radio
+// de un circulo como parametro y devuelva el area del circulo. Recuerda que el area de un circulo se calcula como II * radio^2. 
+// Usa Math.PI para obtener el valor de II
+
+function calcularAreaCirculo(radio) {
+    return Math.PI * (radio ** 2);
+    
+}
+
+
+
+
+</script>
     
 </body>
 </html>

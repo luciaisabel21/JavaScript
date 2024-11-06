@@ -18,7 +18,7 @@ while (true) {
     b = prompt("Introduce otro numero (b)");
     b = Number(b);
 
-    if(isNaN(a)) {
+    if(isNaN(b)) {
         alert("Error , introduzca un numero");
 
     }else {
