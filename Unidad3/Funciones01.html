@@ -124,7 +124,70 @@ function calcularAreaCirculo(radio) {
     
 }
 
+</script>
+<script>
+    //FUNCIONES POR EXPRESION
+    const palabros = ["Lunes", "Martes", "Miercoles"];
+    function longitudPalabras(vector, fun){
+    const resul = [];
+    for(let i = 0; i < vector.length; i++){
+        resul [resul.length] = fun(vector[i]);
+    }
+    return resul;
+}
+const longPalabras = longitudPalabras(palabros);
 
+console.table(palabros);
+console.table(longPalabras);
+
+</script>
+
+<script>
+
+    //FUNCIONES FLECHA
+
+    const multi = (a,b,c) => a*b*c;
+
+// si tiene solo una linea no se pone return
+    console.log(multi(3,2,3));
+
+
+    const sumar = (a,b) => a + b;
+	console.log(sumar(2,3)); //5
+
+// si tiene varias lineas se pone return
+    const multi2 = (a,b,c) => {
+        let resul = 1;
+        resul = resul * a;
+        resul = resul * b;
+        resul = resul * c;
+        return resul;
+    }
+    console.log(multi(3,4,3));
+
+    //si no tiene parametros
+const saludo = () => console.log(Hola, caracola);
+saludo();
+
+
+// si no tiene parametros pero tiene varias lineas
+const saludo2 = () => {
+console.log(Hola, caracola);
+console.log(Adioos)
+saludo2();
+}
+
+//Si tiene un solo parametro puedo omitir los parentesis
+
+const cuadrado = x => x * z;
+console.log(cuadrado(5)); //25
+
+
+//FUNCIONES AUTOEJECUTABLES
+
+(function() {
+	console.log(`Esta funcion se ejecuta de inmediato`);
+} ) ();
 
 
 </script>
