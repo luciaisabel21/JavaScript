@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Practicando todo tipo de ejercicios </title>
+</head>
+<body>
+    <script>
+        //Escribe una función llamada celsiusAFahrenheit que reciba un valor en  grados Celsius y devuelva el valor equivalente en grados Fahrenheit.
+        //La formula para la conversiñon es (celsius *9/5) + 32.
+
+        function celsiusAFahrenheit (grados){
+
+         return  (grados * 9/5) + 32;
+             
+        }
+
+        //hacer la misma pero con una función por expresión anónima(la estrucura de las anonimas es siempre const nombre, ya que la función
+        // no tiene nombre, y se ejecuta de inmediato)
+        
+        const nombre= function (grados){
+
+        return (grados * 9/5) + 32;
+}
+ //como la funcion no tiene nombre se usa el nombre de la variable para llamarla
+    console.log(nombre(11));
+
+    //EJ3. Crea una función por expresión nombrada llamada calcularFactorial que reciba un numero como parametro y devuelve el
+    //factorial del mismo. El factorial de un número es la multiplicación de todos los números desde 1 hasta n
+
+    function calcularFactorial(num){
+        let factorial = 1;
+        for (let i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+    </script>
+</body>
+</html>

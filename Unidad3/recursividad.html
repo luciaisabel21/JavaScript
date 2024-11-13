@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursividad</title>
+</head>
+<body>
+    <script>
+
+function factorial (n) {
+	//caso base
+	if (n === 0) {
+	return 1;
+	}	
+	//Llamada recursiva
+	return n * factorial(n - 1);
+}
+console.log("--->"+factorial(5));
+
+// hecho con for seria así:
+function factorial2(n) {
+    resul = 1;
+    for(let f = n; n>1; n--){
+        resul = resul * f;
+        return resul;
+    }
+}
+
+//crea una funcion recursiva que sume un número tantas
+//veces como se indique. Por ejemplo: fun(3,3) => 3+3+3;  func(6,4) => 6+6+6+6
+
+function sumaRecursiva(num, veces) {
+    // Caso base: cuando 'veces' es 1, se devuelve 'num' como resultado final de la suma
+    if (veces === 1) {
+        return num;
+    }
+    // Caso recursivo: suma el 'num' y llama a la función disminuyendo 'veces' en 1
+    return num + sumaRecursiva(num, veces - 1);
+}
+
+// Ejemplos de uso
+console.log(sumaRecursiva(3, 3)); // 9
+console.log(sumaRecursiva(6, 4)); // 24
+
+//crea una función que calcule la potencia de un número
+    function potencia(num1, num2){
+        //en la base hay que poner la condición con la que acabaría. 
+        //en este caso la potencia acabaria cuando num2 sea cero, y un numero elevado a cero es uno, por eso return 1
+        if(num2 === 0){
+
+            return 1;
+    } else {
+        //aqui se pone la condición normal
+        return num1 * potencia(num1, num2 - 1);
+    }
+    }
+
+console.log(potencia(4,5));
+
+let contador= 0;
+while (contador < 5){
+    console.log("Esto se va a repetir 5 veces");
+    contador++;
+}
+
+    </script>
+    
+</body>
+</html>

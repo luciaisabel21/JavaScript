@@ -189,6 +189,33 @@ console.log(cuadrado(5)); //25
 	console.log(`Esta funcion se ejecuta de inmediato`);
 } ) ();
 
+//ejercicio: funcion que se ejecute automaticamente que haga un multiplicacion de dos numeros
+// y muestre el resultado por consola
+
+(function() {
+    const numero1 = 5;
+    const numero2 = 3;
+    const resultado = numero1 * numero2;
+    console.log("El resultado de la multiplicación es:", resultado);
+})();
+
+//CLAUSURA
+
+
+function crearContador() {
+	let contador = 0; //esta es la variable de la función externa
+return function() { // función interna
+	 contador++; // la función interna accede a contador de la función externa
+	return contador;
+	};
+}
+
+const contador1 = crearContador();
+console.log(contador1()); //1
+console.log(contador1()); //2
+console.log(contador1()); //3
+
+
 
 </script>
     
