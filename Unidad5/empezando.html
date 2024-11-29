@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empezando con objetos</title>
+</head>
+<body>
+    <script>
+
+        // creamos un objeto vacio y le meto datos
+        const usuario = new Object();
+        usuario.codigo = 123;
+        usuario.nombre = "Lucia";
+        usuario.tipo = "Administrador";
+
+        //metodos getter
+
+        usuario.getCodigo = function(){
+            return this.codigo;
+            }
+        usuario.getNombre = function(){
+            return this.nombre
+            }
+        usuario.getTipo = function(){
+            return this.tipo
+            }
+        
+            usuario.mostrarInfo() = function () {
+                console.log(usuario.nombre + " - " + usuario.tipo);
+
+            }
+
+            usuario.mostrarInfo2() = function (){
+                console.log(this.nombre + " - " + usuarthisio.tipo);
+
+            }
+
+            // object this
+
+
+            console.log(usuario.nombre);
+            console.log(usuario.getTipo());
+
+            const paco = usuario;
+
+            paco.mostrarInfo();
+            usuario = null;
+
+            let a = 5;
+            let b = a;
+            a = null;
+            console.log(b); //5
+
+
+
+            // crea un objeto llamado usuario que permita autenticr a la persona que quiere iniciar sesion en el sistema
+            const usuario = {
+                nombre: "Lucia",
+                nombreUsuario: "Lucia21",
+                contrasena: "123456",
+                login:function(nombreUsuario, contrasena) {
+                    if (nombreUsuario === this.nombreUsuario && contrasena === this.contrasena) {
+                        console.log("Sesión iniciada con éxito");
+                }else {
+                    console.log("Credenciales no válidad");
+                }
+            }
+        }
+        usuario.login("Lucia21", 123456);
+        usuario.login("Lucia21", "ABCDE");
+
+
+    </script>
+    
+</body>
+</html>
