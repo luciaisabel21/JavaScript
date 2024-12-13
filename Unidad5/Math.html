@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const n = -125.45;
+        console.log(`El valor absoluto de ${n} es ${Math.abs(n)}`);
+        console.log(`El valor que proporciona ceil de ${n} es ${Math.ceil(n)}`);
+        console.log(`El valor que proporciona floor de ${n} es ${Math.floor(n)}`);
+        console.log(`El valor que proporciona round de ${n} es ${Math.round(n)}`);
+
+
+    // crea una funcion que genere de forma aleatoria el codigo de un color en hexadecimal. Por ejemplo: #FFFFFF, #45AAF0 en javascript
+    function generarColorHexadecimal() {
+    
+    const numeroAleatorio ="#" + Math.floor(Math.random() * 16777216).toString(16); 
+    
+   }
+
+    console.log(generarColorHexadecimal());
+    
+/* OTRA FORMA DE HACERLO
+
+function dameColAlea() 
+ const num = [0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F];
+let resul = "";
+for (let i = 0; i < 6; i++) {
+    let ale = Math.trunc(Math.random()*100)%num.length;
+    resul = resul + num[ale]
+    }
+
+    console.log(dameColAlea());
+    */
+
+    </script>
+
+</body> 
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Date - Fecha </title>
+</head>
+<body>
+    <script>
+        const fecha01 = new Date();
+        //enero es 0 por eso se le suma uno
+        console.log(fecha01.getDate() + "/" + (fecha01.getMonth()+1) + "/" + fecha01.getFullYear());
+
+        fecha01.setFullYear(2000);
+        console.log("Año modificado->" + fecha01.getDate() + "/" + (fecha01.getMonth()+1) + "/" + fecha01.getFullYear());
+
+        //crear una funcion que reicba el año mes y dia y devuelva un string con el dia de la semana que es
+        // Función para obtener el día de la semana
+    
+    function obtenerDiaDeLaSemana(ano, mes, dia) {
+    
+    const fecha = new Date(ano, mes - 1, dia); // Mes se resta 1 porque los meses en JavaScript empiezan desde 0
+
+    // Array con los nombres de los días de la semana
+    const diasDeLaSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+
+    // Obtener el día de la semana (0 = Domingo, 6 = Sábado)
+    const diaDeLaSemana = fecha.getDay();
+
+    
+    return diasDeLaSemana[diaDeLaSemana];
+}
+
+// Ejemplo de uso
+console.log(obtenerDiaDeLaSemana(2024, 12, 11)); // Miércoles
+
+
+/* 
+Ora forma de hacerlo:
+function dameDia (d,m,a) {
+    const semana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+    return semana[new Date(a,m-1,d).getDay()];
+}
+    console.log(dameDia(11,12,1024);*/
+
+
+
+
+    </script>
+    
+</body>
+</html>

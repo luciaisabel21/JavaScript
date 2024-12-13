@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipos</title>
+</head>
+<body>
+    <script>
+//Uso de prototipos
+
+function Viaje(origen, destino, dias, precio){
+    this.origen = origen;
+    this.destino = destino;
+    this.dias = dias;
+    this.precio = precio;
+    this.mostrar = function(){
+        console.log(`${this.origen} / ${this.destino}`);
+        console.log(`durante ${this.dias} dias : EUR ${this.precio}`);
+    }
+}
+let viaje1 = new Viaje("Madrid", "Barcelona", 3, 200);
+console.log(viaje1);
+
+
+
+    </script>
+</body>
+</html>

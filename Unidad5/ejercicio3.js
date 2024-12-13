@@ -1,9 +1,6 @@
 //Herencia y polimorfismo
 
 class Miembro {
-    nombre="nombre apellido1 apellido2";
-    alta = "01/01/2022";
-    estado ="vigente";
     constructor(nombre,alta,estado){
         this.nombre=nombre;
         this.alta=alta;
