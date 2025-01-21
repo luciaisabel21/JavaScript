@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empezando unidad 6</title>
+    <script>
+        let ancho = window.innerWidth;
+        let alto = window.innerHeight;
+        console.log(`Ancho x Alto: ${ancho} x ${alto}`);
+
+        let nombre = prompt("Introduza su nombre");
+        let resul = confirm(`Hola ${nombre}, ¿Deseas cerrar la ventana del navegador?`);
+        if(resul){
+            alert("Hasta la bista!")
+            window.close()
+        }else {
+            alert("Sabia elección");
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Quita foco" action=" blur()">
+    <input type="button" value="Pon foco" action=" blur()">
+    <input type="button" value="Cierra la ventana" action=" blur()">
+    
+</body>
+</html>
