@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Referencia a nodos</h1>
+    <p> vemos como hacer referencia a los nodos </p>
+    <p> ¿Qué cositas podemos hacer? 
+    <ul id="cosashacer">
+        <li>Movernos por el arbol de nodos</li>
+        <li>Modificar nodos y atributos</li>
+        <li>Añadir nodos y atributos</li>
+
+
+    </ul>
+</p>
+
+<p class="jefe">Mikel</p>
+<p class="profesor">Marco</p>
+<p class="profesor">Manuel</p>
+<p class="profesor">Mario</p>
+<p class="profesor">Sete</p>
+<script>
+    /*let lista = document.getElementById("cosashacer");
+    console.log(lista.nodeType);
+
+    let colLi = document.getElementsByTagName("li");
+    console.log(colLi.length);
+
+    for (let i = 0; i < colLi.length; i++) {
+        console.log(colLi[i].textContent);
+        
+    } */
+
+    let colclas = document.getElementsByClassName("profesor");
+    console.log(colclas.length);
+    
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6.2 pg186</title>
+</head>
+<body>
+    <!-- crea un fragmento de HTML que contenga cinco párrafos y cuyas etiquetas no 
+     tengan ningún atributo. A continuación, muestra en la consola el contenido del 
+     pénultimo párrafo-->
+     <p>primer párrafo</p>
+     <p>segundo párrafo</p>
+     <p>tercer párrafo</p>
+     <p>cuarto párrafo</p>
+     <p>quinto párrafo</p>
+     <script>
+        let fragmento = document.createDocumentFragment();
+        for (let i = 0; i < 5; i++) {
+            let p = document.createElement("p");
+            p.textContent = `Este es el párrafo ${i + 1}`;
+            fragmento.appendChild(p);
+            }
+        
+     </script>
+    
+</body>
+</html>
