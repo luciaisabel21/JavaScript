@@ -60,12 +60,10 @@
      <p>cuarto párrafo</p>
      <p>quinto párrafo</p>
      <script>
-        let fragmento = document.createDocumentFragment();
-        for (let i = 0; i < 5; i++) {
-            let p = document.createElement("p");
-            p.textContent = `Este es el párrafo ${i + 1}`;
-            fragmento.appendChild(p);
-            }
+        let parrafo = document.getElementByTagName("p");
+        console.log(parrafo[3].textContent);
+     
+     
         
      </script>
     
