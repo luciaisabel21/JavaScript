@@ -17,19 +17,9 @@
     </ul>
     <p>Estos son algunos de los módulos de DAW. </p>
     
-    <script>
-
-        let nodoModulo = document.getElementById("modulos");
-        let ulNodo= nodoModulo.lastElementChild;
-
-        console.log(ulNodo.textContent); //mostraría DESARROLLO WEB EN ENTORNO CLIENTE
-
-        console.log(ulNodo.previousElementSibling.textContent); //mostraría LENGUAJE DE MARCAS 
-    </script>
-
-
 
     <script>        
+    /*
         let modulos = document.getElementById("modulos");
         let hijos1 = modulos.childNodes;
         console.log("total de nodos" + hijos1.length);
@@ -40,6 +30,94 @@
 
         let hijoselem = modulos.children;
         console.log("total de nodos" + hijoselem.length);
+        */
     </script>
+
+<script>
+/*
+    let nodoModulo = document.getElementById("modulos");
+    let ulNodo= nodoModulo.lastElementChild;
+
+    console.log(ulNodo.textContent); //mostraría DESARROLLO WEB EN ENTORNO CLIENTE
+
+    console.log(ulNodo.previousElementSibling.textContent); //mostraría LENGUAJE DE MARCAS 
+    */
+</script>
+
+
+<script>
+    /*
+    //Crear nodo elemento
+    let nueLi = document.createElement("li");
+
+
+    //Crear nodo de tipo texto
+    let texto = document.createTextNode("Ingles");
+    nueLi.appendChild(texto);
+
+    let modulos = document.getElementById("modulos");
+    modulos.appendChild(nueLi);
+
+    //otra forma de hacerlo sin crear nodo texto:
+    //crear nodo elemento
+    nueLi = document.createElement("li");
+    nueLi.textContent = "Empresa";
+
+    //añadimos elemento LI a modulos
+    modulos.appendChild(nueLi);
+    ________________________________________________
+
+    //METODO insertBefore
+    nueLi = document.createElement("li");
+    nueLi.textContent = "FORMACIÓN Y ORIENTACION LABORAL";
+    modulos.insertBefore(nueLi, modulos.firstElementChild);
+*/
+</script>
+
+<script>
+/*
+    //Ejercicio: crea una función que pida por prompt un texto y que añada ese texto en forma de párrafo
+
+    function agregarParrafo() {
+    let texto = prompt("Escribe un texto:");
+    if (texto) {
+        let parrafo = document.createElement("p");
+        parrafo.textContent = texto;
+        document.body.appendChild(parrafo);
+    }
+}
+agregarParrafo();
+*/
+</script>
+<script>
+    /*
+    let nodoOrigen = document.getElementById("modulos");
+
+    let nuevo = document.createElement("li");
+    let txt = document.createTextNode("desarrollo web entorno servidor");
+    nuevo.appendChild(txt);
+
+    nodoOrigen.replaceChild(nuevo, nodoOrigen.firstElementChild);
+    */
+</script>
+<script>
+    //localizar el párrafo destino
+     let nodoOrigen = document.getElementById("modulos");
+     let destino = nodoOrigen.nextElementSibling;
+     console.log(destino.textContent);
+
+     //crear nodo
+     let nueOL = document.createElement("ol"); //ol significa order list
+     let nueLI = document.createElement("li"); //lI significa list item
+     let txt = document.createTextNode(destino.textContent);
+
+     nueLI.appendChild(txt);
+     nueOL.appendChild(nueLI);
+
+     // reemplazamos el viejo nodo por el nuevo
+     document.replaceChild(nueOL, destino);
+
+
+</script>
 </body>
 </html>
