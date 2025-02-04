@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios libro pagina 201</title>
+</head>
+<body>
+    <h1> Ejercicio</h1>
+    <!-- escribe un programa que permita modificar el estilo de un párafo cuyo identificador es "párrafo " -->
+    <br>
+    <p id="parrafo"> Esto es un párrafo </p>
+    <input type="button" onclick="estilo()" value="Pon color">
+
+    <script>
+        function estilo(){
+            let nodo = document.getElementById("parrafo");
+            nodo.style.color = "red";
+
+        
+        }
+    </script>
+
+    <h1> Ejercicio 2 </h1>
+    <!-- crea un programa que, partiendo de un código html con una lista ordenada de personas,
+     devuelva los nombre de la primera y de la última de la lsita-->
+     <br>
+     <ol>
+        <li> Juan </li>
+        <li> Ana </li>
+        <li> Carlos </li>
+        <li> Maria </li>
+     </ol>
+     <input type="button" onclick="dameUsuarios()" value="Nombre de la primera y la última
+     persona de la lista">
+     <script>
+        function dameUsuarios(){
+            
+            let listaNodos = lista.getElementsByTagName("ol");
+            console.log(lista.length);
+            console.log(lista[0].firstElementChild.textContent);
+            console.log(lista[0].lastElementChild.textContent);
+
+        }
+     </script>
+</body>
+</html>
